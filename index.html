@@ -1,15 +1,62 @@
 <!DOCTYPE html>
-<html lang="en">
+<html>
 <head>
-    <meta charset="UTF-8">
-    <title></title>
-    <link rel="stylesheet" href="style.css">
+	<link rel="stylesheet" type="text/css" href="styles.css"></link>
+	<link href="https://fonts.googleapis.com/css?family=Raleway" rel="stylesheet">
+	<title>My Map</title>
 </head>
 <body>
-    <div class="container">
-        <h1>Hello World!</h1>
-        <button id="btn">Click me</button>
-    </div>
-    <script src="index.js"></script>
+
+	<div id="container">
+
+		<div id="leftPanel">
+			<div id="leftHeader">IRONHACKS TITLE</div>
+			<div id="btnsContainter">
+				<button id="crimesBtn" onClick="showChart(this.id)">SEE CRIME RATES</button>
+				<button id="trafficBtn" onClick="showChart(this.id)">SEE TRAFFIC DENSITY</button>
+				<button id="pollutionBtn" onClick="showChart(this.id)">SEE AIR POLLUTION</button>
+				<button id="tableBtn" onClick="showChart(this.id)">SEE COMPARISON TABLE</button>
+			</div>
+		</div>
+		<div id="rightPanel">
+			<div id="map"></div>
+			
+			<div id="headerChart"></div>
+			<div id="mainChartContainer">
+				<div id="mainChart"></div>
+			</div>
+
+		</div>
+
+	</div>
+
+<script 
+  src="https://code.jquery.com/jquery-3.3.1.min.js"
+  integrity="sha256-FgpCb/KJQlLNfOu91ta32o/NMZxltwRo8QtmkMRdAu8="
+  crossorigin="anonymous"></script>
+
+<script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyC96XkMS5O1gMAUvm3D3CMHfy8mePxKc5U&callback=initMap"
+async defer></script>
+
+<script src="kdTree-min.js"></script>
+<!--
+<script src="kdTreeFunctions.js"></script>-->
+<script src="defineVariables.js"></script>
+<script src="mapStyles.js"></script>
+<script src="treatData.js"></script>
+<script src="mapDrawing.js"></script>
+<script src="fetchData.js"></script>
+<script src="clickHandlers.js"></script>
+
+<!--
+<script src="https://d3js.org/d3.v3.min.js"></script>
+
+<script src="expo.js"></script>
+-->
+
+<script src="https://d3js.org/d3.v3.min.js"></script>
+<script src="drawBarsGraph.js"></script>
+<script src="websiteFlow.js"></script>
+
 </body>
 </html>
